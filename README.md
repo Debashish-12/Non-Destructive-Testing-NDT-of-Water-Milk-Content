@@ -1,38 +1,55 @@
-# Smart Gesture-to-Speech Glove
+# Non-Destructive Testing System for Milk Quality
 
-This project is a wearable assistive device designed to help speech-impaired individuals communicate more effectively.  
-The glove uses flex sensors and an MPU6050 motion sensor to detect hand gestures, which are then converted into speech and text via Bluetooth Low Energy (BLE).  
-It also integrates a MAX30102 sensor for real-time heart rate and SpO₂ monitoring, combining communication support with basic health tracking.
-
----
-
-## Project Videos
-- Project Presentation: [View](https://drive.google.com/file/d/1NhOoB2F6dxvqF_Vjk7UGm4oJMjm8GlDw/view?usp=drive_link)  
-- Live Demonstration: [View](https://drive.google.com/file/d/1kISrB61MkR8p2K78YtTlxBDvFEG-ary-/view?usp=drive_link)
+This project presents a low-cost, portable system for detecting water adulteration in milk using **microwave sensing** and **software-defined radio (SDR)** technology.  
+By leveraging the **ADALM-PLUTO SDR**, **Raspberry Pi**, and a **custom-designed microwave resonator**, the device measures dielectric property variations to determine water content without damaging the sample.
 
 ---
 
-## Features
-- Gesture recognition using flex sensors and MPU6050 (accelerometer + gyroscope)
-- Speech and text output via Bluetooth Low Energy (BLE)
-- Real-time heart rate and SpO₂ monitoring with MAX30102
-- OLED display for local feedback
-- Portable and low-power design for everyday use
+## Project Video
+- Demonstration & Report Walkthrough: [Watch Here](https://drive.google.com/file/d/1Vm7-oqjqp5PHV5cjzx6X19xbDVr_Dte7/view?usp=drive_link)
+
+---
+
+## Key Features
+- Detects **water content percentage** in milk with high sensitivity.
+- **Non-destructive** and contact-based dielectric measurement.
+- Operates at **2.4 GHz ISM band** using a custom SRR-based microwave sensor.
+- Real-time data acquisition and processing with a **Python GUI**.
+- Portable and low-cost for **field deployment**.
+
+---
+
+## System Overview
+1. **Microwave Sensor Design**  
+   - Nested square split ring resonators (SRRs) fabricated on Rogers RO4350B substrate.  
+   - Optimized in CST Microwave Studio for high sensitivity to dielectric changes.
+
+2. **Signal Processing**  
+   - ADALM-PLUTO SDR excites the sensor and measures the **S21 transmission coefficient**.  
+   - Raspberry Pi handles data acquisition and processing via **pyadi-iio**.
+
+3. **Liquid Classification**  
+   - Attenuation levels are mapped to specific milk-water ratios.  
+   - GUI displays results every 3 seconds.
 
 ---
 
 ## Hardware Used
-- ESP32 microcontroller
-- Flex sensors (5 units)
-- MPU6050 accelerometer and gyroscope
-- MAX30102 heart rate and SpO₂ sensor
-- OLED display
-- Battery pack
+- ADALM-PLUTO SDR
+- Raspberry Pi
+- Custom microwave resonator sensor
+- SMA connectors & RF cables
 
 ---
 
-## Software and Tools
-- Arduino IDE
-- Embedded C/C++
-- Bluetooth Low Energy (BLE) libraries
-- Sensor libraries (MPU6050, MAX30102, OLED display)
+## Software & Tools
+- CST Microwave Studio
+- Python (Tkinter, NumPy, pyadi-iio)
+- Vector Network Analyzer (for calibration)
+
+---
+
+## Applications
+- Milk adulteration detection in dairy farms and collection centers
+- Field-deployable liquid quality testing
+- Scalable to detect other liquid adulterants
