@@ -6,7 +6,7 @@ By leveraging the **ADALM-PLUTO SDR**, **Raspberry Pi**, and a **custom-designed
 ---
 
 ## Project Video
-- Demonstration & Report Walkthrough: [Watch Here](https://drive.google.com/file/d/1Vm7-oqjqp5PHV5cjzx6X19xbDVr_Dte7/view?usp=drive_link)
+- Making of the Sensor: [Watch Here](https://drive.google.com/file/d/1Vm7-oqjqp5PHV5cjzx6X19xbDVr_Dte7/view?usp=drive_link)
 
 ---
 
