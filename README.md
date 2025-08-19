@@ -1,5 +1,8 @@
 # Non-Destructive Testing System for Milk Quality
 
+Project Video
+- Making of the Sensor: [Watch Here](https://drive.google.com/file/d/1Vm7-oqjqp5PHV5cjzx6X19xbDVr_Dte7/view?usp=drive_link)
+
 This project presents a low-cost, portable system for detecting water adulteration in milk using **microwave sensing** and **software-defined radio (SDR)** technology.  
 By leveraging the **ADALM-PLUTO SDR**, **Raspberry Pi**, and a **custom-designed microwave resonator**, the device measures dielectric property variations to determine water content without damaging the sample.
 
